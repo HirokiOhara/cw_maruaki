@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    Hello, "index.vue"
+    Hello, "about.vue"
   </v-container>
 </template>
 
