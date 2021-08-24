@@ -1,6 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar app></v-app-bar>
+    <v-app-bar
+      app
+      height="200"
+      fixed
+      flat
+      color="rgba(255,255,255,0.9)"
+    >
+      <v-container class="fill-height">
+        <nuxt-link to="/">
+          <img
+            class="header-logo"
+            alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
+            src="@/static/icon0401.jpg"
+          />
+        </nuxt-link>
+        <v-spacer></v-spacer>
+        <v-btn
+          v-for="item in items" :key="item.title" :to="item.slug"
+          class="font-weight-light"
+          plain
+          text
+          color="black"
+          small
+          nuxt
+        >
+          {{ item.title }}
+        </v-btn>
+      </v-container>
+    </v-app-bar>
 
     <v-main>
       <nuxt />
@@ -9,8 +37,45 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          title: '最新情報',
+          slug: '/news',
+        },
+        {
+          title: '業務内容',
+          slug: '/works',
+        },
+        {
+          title: '問い合わせ',
+          slug: '/contact',
+        },
+        {
+          title: '会社概要',
+          slug: '/profile',
+        },
+        {
+          title: 'ブログ',
+          slug: '/',
+        },
+        {
+          title: '採用情報',
+          slug: '/recruit',
+        },
+      ]
+    }
+  }
+}
 </script>
 
-<script>
-export default {}
-</script>
+<style scoped lang="scss">
+.container {
+  max-width: 1000px;
+}
+.header-logo {
+  width: 100px;
+}
+</style>

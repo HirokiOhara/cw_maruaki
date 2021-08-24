@@ -1,11 +1,118 @@
 <template>
   <v-container>
-    Hello, "index.vue"
+    <div class="box">
+      <div class="box-left">
+        <img
+          class="logo"
+          alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
+          src="@/static/icon0401.jpg"
+        />
+      </div>
+      <div class="box-right">
+        <v-row v-for="item in items" :key="item.title">
+          <v-col>
+            <nuxt-link class="link" :to="item.slug">
+              {{ item.title }}
+            </nuxt-link>
+          </v-col>
+        </v-row>
+      </div>
+    </div>
+    <div class="footer-box">
+      <v-row>
+        <v-col>
+          <h2 class="v-text">丸明造園</h2>
+          <p>
+            私たちは、「庭師を源流とする造園技能を引き継ぐ」少数精鋭集団です。<br />
+            ゴーシュも口をりんと結んで眼めを皿さらのようにして楽譜がくふを見つめながらもう一心に弾いています。<br />
+            にわかにぱたっと楽長が両手を鳴らしました。みんなぴたりと曲をやめてしんとしました。楽長がどなりました。<br />
+            「セロがおくれた。トォテテテテテイ、ここからやり直し。はいっ。」<br />
+          </p>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
 <script>
 export default {
-  layout: 'index',
+  layout: 'home',
+  data() {
+    return {
+      items: [
+        {
+          title: '最新情報',
+          slug: '/news',
+        },
+        {
+          title: '業務内容',
+          slug: '/works',
+        },
+        {
+          title: '問い合わせ',
+          slug: '/contact',
+        },
+        {
+          title: '会社概要',
+          slug: '/profile',
+        },
+        {
+          title: 'ブログ',
+          slug: '/',
+        },
+        {
+          title: '採用情報',
+          slug: '/recruit',
+        },
+      ]
+    }
+  }
 }
 </script>
+
+<style scoped lang="scss">
+.test {
+  position: relative;
+}
+.logo {
+  position: absolute;
+  width: 500px;
+  top: 10%;
+  left: 0;
+}
+.box {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  &-left {
+    width: 500px;
+    height: 500px;
+  }
+  &-right {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    line-height: 1.5;
+    padding: 20px;
+    font-size: 30px;
+  }
+}
+.footer-box {
+  height: 500px;
+  background-color: rgba(0,0,0,0.3);
+  .v-text {
+    font-size: 50px;
+  }
+}
+.link {
+  transition: .28s;
+  color: rgba(1,1,1,0.68);
+  text-decoration: none;
+  &:hover {
+    color: rgba(1,1,1,1);
+  }
+}
+</style>
