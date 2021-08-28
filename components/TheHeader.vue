@@ -11,12 +11,12 @@
         <img
           class="header-logo"
           alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
-          src="@/static/icon0401.jpg"
+          src="@/static/maruaki_logo.jpg"
         />
       </nuxt-link>
       <v-spacer></v-spacer>
       <v-btn
-      class="link"
+        class="link"
         v-for="item in items" :key="item.title" :to="item.slug"
         plain
         text
@@ -49,10 +49,6 @@ export default {
         {
           title: '会社概要',
           slug: '/profile',
-        },
-        {
-          title: 'ブログ',
-          slug: '/',
         },
         {
           title: '採用情報',

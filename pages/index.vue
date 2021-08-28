@@ -5,7 +5,7 @@
         <img
           class="logo"
           alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
-          src="@/static/icon0401.jpg"
+          src="@/static/maruaki_logo.jpg"
         />
       </div>
       <div class="box-right">
