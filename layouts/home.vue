@@ -3,11 +3,16 @@
     <v-main>
       <nuxt />
     </v-main>
+    <TheFooter />
   </v-app>
 </template>
 
 <script>
-export default {}
+import TheFooter from '~/components/TheFooter.vue'
+
+export default {
+  components: { TheFooter },
+}
 </script>
 
 <style scoped lang="scss">

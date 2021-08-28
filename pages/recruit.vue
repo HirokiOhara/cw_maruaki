@@ -92,7 +92,7 @@
       </v-row>
     </div>
     <div class="content-box">
-      <v-row justify="center" align="center" class="row-pitch button-font">
+      <v-row justify="center" align="center" class="content-box-body">
         <v-col cols="6">
           <v-btn
             block

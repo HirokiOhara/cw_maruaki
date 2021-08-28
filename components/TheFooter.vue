@@ -7,7 +7,10 @@
     <v-row justify="center" no-gutters class="link">
       <v-btn
         class="link"
-        v-for="item in items" :key="item.title" :to="item.slug"
+        v-for="item in items"
+        :key="item.title"
+        :to="item.slug"
+        :href="item.href"
         plain
         text
         color="black"
@@ -29,7 +32,7 @@ export default {
       items: [
         {
           title: 'ブログ',
-          slug: '/',
+          href: 'https://note.com/latelucet/',
         },
         {
           title: 'サイトについて',
@@ -45,10 +48,7 @@ export default {
 .container {
   width: 1000px;
 }
-.header-logo {
-  width: 100px;
-}
-header {
+footer {
   .v-btn.v-size--default {
     font-size: 1rem;
   }
