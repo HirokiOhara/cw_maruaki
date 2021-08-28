@@ -71,14 +71,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
 .test {
   position: relative;
 }
 .logo {
   position: absolute;
   width: 500px;
-  top: 10%;
-  left: 0;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
 }
 .box {
   position: relative;
@@ -90,7 +93,7 @@ export default {
   }
   &-right {
     position: absolute;
-    top: 60%;
+    top: 50%;
     right: 10%;
     transform: translateY(-50%);
     width: auto;
@@ -108,6 +111,8 @@ export default {
   }
 }
 .link {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
   transition: .28s;
   color: rgba(1,1,1,0.68);
   text-decoration: none;
