@@ -46,6 +46,16 @@
         </v-row>
         <v-row>
           <v-col cols="3" class="content-box-title">
+            <p>建設業 許可番号</p>
+          </v-col>
+          <v-col cols="9" class="content-box-body">
+            <p>
+              埼玉県知事　許可（般-2）　第55971号
+            </p>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="3" class="content-box-title">
             <p>
               所在地
             </p>
