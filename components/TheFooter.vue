@@ -4,9 +4,8 @@
     height="200"
     padless
   >
-    <v-row justify="center" no-gutters class="link">
+    <v-row justify="center" no-gutters class="footer-link">
       <v-btn
-        class="link"
         v-for="item in items"
         :key="item.title"
         :to="item.slug"
@@ -32,7 +31,7 @@ export default {
       items: [
         {
           title: 'ブログ',
-          href: 'https://note.com/latelucet/',
+          href: 'https://note.com/maruaki_zouen',
         },
         {
           title: 'サイトについて',
@@ -43,18 +42,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.container {
-  width: 1000px;
-}
-footer {
-  .v-btn.v-size--default {
-    font-size: 1rem;
-  }
-}
-.link {
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 400;
-}
-</style>

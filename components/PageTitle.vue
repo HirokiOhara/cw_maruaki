@@ -16,9 +16,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
-  width: 1000px;
-}
 .page-title {
   font-family: 'Noto Serif JP', serif;
   font-weight: 400;

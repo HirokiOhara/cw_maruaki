@@ -1,43 +1,29 @@
 <template>
   <v-container>
-    <PageTitle :title="contents[0].title" />
-    Hello, "news/index.vue"
-    <!-- <v-row>
-      <v-col
-        v-for="(post, index) in posts"
-        :key="index"
-        :post="post"
-        cols="12"
-      >
-        <v-hover v-slot="{ hover }">
-          <v-card
-            :to="linkTo('information', post)"
-            flat
-            data-cursor-hover
-            :class="{ 'on-hover': hover }"
-          >
-            <v-list-item two-line>
-              <v-list-item-content>
-                <v-list-item-title
-                  class="title-font"
-                  v-text="post.fields.title"
-                >
-                </v-list-item-title>
-                <v-list-item-subtitle>
-                  <p class="card-date">
-                    {{ post.fields.postedDate }}
-                  </p>
-                  <span :is="draftChip(post)" />
-                  <template v-if="post.metadata.tags.length > 0">
-                    <v-spacer />
-                  </template>
-                </v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </v-hover>
-      </v-col>
-    </v-row> -->
+    <PageTitle :title="page[0].title" />
+    <div class="content-box">
+      <v-row v-for="content in contents" :key="content.id">
+        <v-col>
+          <v-hover v-slot="{ hover }">
+            <v-card
+              :class="{ 'on-hover': hover }"
+              :to="`news/${content.id}`"
+              flat
+              nuxt
+            >
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title v-text="content.title" class="content-box-title" />
+                  <v-list-item-subtitle class="content-box-body">
+                    {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
+                  </v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
@@ -47,19 +33,46 @@ import PageTitle from '~/components/PageTitle.vue'
 export default {
   components: { PageTitle },
   layout: 'index',
+  async asyncData({ $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'news',
+      queries: { limit: 100, filters: 'createdAt[greater_than]2021' },
+    });
+    return data;
+  },
   data() {
     return {
-      contents: [
+      page: [
         {
           title: '最 新 情 報',
           url: '/news',
         },
       ],
+      options: [
+        {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          weekday: 'short',
+        }
+      ]
     }
   },
 }
 </script>
 
 <style scoped lang="scss">
-
+.v-card.on-hover {
+  background-color: rgb(250, 250, 250);
+}
+.content-box {
+  &-title {
+    font-weight: 400;
+    font-size: 32px;
+  }
+  &-body {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
 </style>

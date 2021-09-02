@@ -1,17 +1,10 @@
 <template>
   <v-container>
-    <PageTitle :title="contents[0].title" />
-    <!-- <v-row v-for="item in items" :key="item.title">
-      <v-col>
-        <nuxt-link class="link" :to="item.slug">
-          {{ item.title }}
-        </nuxt-link>
-      </v-col>
-    </v-row> -->
+    <PageTitle :title="page[0].title" />
     <div class="content-box content-box-body">
       お問い合わせいただき、誠にありがとうございます。<br /><br />
       内容を確認した後に、当社より返信いたします。<br /><br />
-      また、以前依頼していただいた方は、電話・メールを直接送っていただいてもかまいません。
+      また、以前依頼していただいた方は、電話やメールで担当に連絡していただいても問題ありません。
     </div>
     <div class="content-box" v-for="item in items" :key="item.title">
       <v-row justify="center" align="start">
@@ -79,7 +72,7 @@ export default {
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link',
         },
       ],
-      contents: [
+      page: [
         {
           title: '問 い 合 わ せ',
           url: '/contact',
@@ -91,18 +84,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.vertical-text {
-  writing-mode: vertical-rl;
-}
 .content-box {
-  margin: 100px 0;
   &-title {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 300;
     font-size: 30px;
   }
   &-body {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 300;
     font-size: 18px;
   }

@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <PageTitle :title="contents[0].title" />
+    <PageTitle :title="page[0].title" />
     <div class="content-box">
       <v-col cols="12">
         <v-row>
-          <v-col cols="3" class="content-box-title">
+          <v-col cols="3" sm="3" class="content-box-title">
             <p>社名</p>
           </v-col>
           <v-col cols="9" class="content-box-body">
@@ -26,7 +26,7 @@
         </v-row>
         <v-row>
           <v-col cols="3" class="content-box-title">
-            <p>取締役社長</p>
+            <p>代表取締役社長</p>
           </v-col>
           <v-col cols="9" class="content-box-body">
             <p>
@@ -56,7 +56,7 @@
             </p>
             <!-- ここに地図が入る -->
             <img
-              class="logo"
+              class="map"
               alt="ashido"
               src="@/static/ishida.jpg"
             />
@@ -75,7 +75,7 @@ export default {
   layout: 'index',
   data() {
     return {
-      contents: [
+      page: [
         {
           title: '会 社 概 要',
           url: '/profile',
@@ -88,14 +88,11 @@ export default {
 
 <style scoped lang="scss">
 .content-box {
-  margin: 100px 0;
   &-title {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 500;
     font-size: 18px;
   }
   &-body {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 200;
     font-size: 18px;
   }

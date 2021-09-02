@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <PageTitle :title="contents[0].title" />
+    <PageTitle :title="page[0].title" />
     Hello, "works.vue"
   </v-container>
 </template>
@@ -13,7 +13,7 @@ export default {
   layout: 'index',
   data() {
     return {
-      contents: [
+      page: [
         {
           title: '業 務 内 容',
           url: '/works',

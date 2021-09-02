@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <PageTitle :title="contents[0].title" />
+    <PageTitle :title="page[0].title" />
     <div class="content-box">
       <v-row justify="center" align="start">
         <div class="content-box-title vertical-text">
-          社長からのメッセージ
+          社長からの挨拶
         </div>
         <v-divider class="mx-4" vertical></v-divider>
         <v-col class="content-box-body" cols="5">
@@ -16,13 +16,13 @@
         </v-col>
         <v-col cols="5">
           <img
-            class="logo"
+            class="re_img"
             alt="ashido"
             src="@/static/portrait.jpg"
           />
           <br />
           <img
-            class="logo"
+            class="re_img"
             alt="tsuyu chan"
             src="@/static/signature.jpg"
           />
@@ -50,7 +50,8 @@
               <ul>
                 <li>xxやyyを扱える</li>
                 <li>zzやwwについて知識がある</li>
-                <li>造園で頑張ってみたいという意志がある</li>
+                <li>行動力・実行力がある人</li>
+                <li>元気がある人</li>
               </ul>
             </v-col>
           </v-row>
@@ -118,7 +119,7 @@ export default {
   layout: 'index',
   data() {
     return {
-      contents: [
+      page: [
         {
           title: '採 用 情 報',
           url: '/recruit',
@@ -130,20 +131,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.vertical-text {
-  writing-mode: vertical-rl;
-}
 .content-box {
-  margin: 100px 0;
   &-title {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 200;
     font-size: 40px;
   }
   &-body {
-    font-family: 'Noto Serif JP', serif;
     font-weight: 200;
     font-size: 18px;
   }
+}
+.re_img {
+  width: inherit;
 }
 </style>

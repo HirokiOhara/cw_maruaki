@@ -6,7 +6,7 @@
     flat
     color="rgba(255,255,255,0.9)"
   >
-    <v-container class="fill-height">
+    <v-container class="fill-height header-box">
       <nuxt-link to="/">
         <img
           class="header-logo"
@@ -16,7 +16,7 @@
       </nuxt-link>
       <v-spacer></v-spacer>
       <v-btn
-        class="link"
+        class="header-link"
         v-for="item in items" :key="item.title" :to="item.slug"
         plain
         text
@@ -38,10 +38,10 @@ export default {
           title: '最新情報',
           slug: '/news',
         },
-        {
-          title: '業務内容',
-          slug: '/works',
-        },
+        // {
+        //   title: '業務内容',
+        //   slug: '/works',
+        // },
         {
           title: '問い合わせ',
           slug: '/contact',
@@ -61,19 +61,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
-  width: 1000px;
-}
-.header-logo {
-  width: 100px;
-}
-header {
-  .v-btn.v-size--default {
-    font-size: 1rem;
-  }
-}
-.link {
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 400;
+// Vuetifyのせいで、ヘッダーが短くなるのを防ぐ
+// @media (min-width: 960px) {
+//   .container {
+//     max-width: 1000px;
+//   }
+// }
+.header-box {
+  max-width: 1000px;
 }
 </style>

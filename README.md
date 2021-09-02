@@ -6,3 +6,4 @@ The idea is from:
 
 - testestest
 - リセット CSS: [ress](https://github.com/filipelinhares/ress)
+- font: [NotoSerif JP](https://fonts.google.com/specimen/Noto+Serif+JP?subset=japanese#standard-styles)

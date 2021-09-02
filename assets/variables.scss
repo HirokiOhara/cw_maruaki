@@ -1,1 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 $toolbar-content-padding-x: 0px;
+
+header {
+  .v-btn.v-size--default {
+    font-size: 1rem;
+  }
+}
+
+.header {
+  &-logo {
+    width: 100px;
+  }
+  &-link {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+  }
+}
+
+footer {
+  .v-btn.v-size--default {
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  &-link {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+  }
+}
+
+.home {
+  position: relative;
+  min-height: 700px;
+  height: 100vh;
+  &-left {
+    width: 500px;
+    height: 500px;
+  }
+  &-right {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    line-height: 1.5;
+    padding: 20px;
+    font-size: 30px;
+  }
+  &-logo {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+  &-link {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 600;
+    transition: 0.28s;
+    color: rgba(1, 1, 1, 0.68) !important;
+    text-decoration: none;
+    &:hover {
+      color: rgba(1, 1, 1, 1) !important;
+    }
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+.content-box {
+  margin: 100px 0;
+  &-title {
+    font-family: "Noto Serif JP", serif;
+  }
+  &-body {
+    font-family: "Noto Serif JP", serif;
+    & > h1 {
+      font-size: 30px;
+      font-weight: 500;
+      margin: 40px 0 20px;
+      background-color: #eee;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    & > h2 {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 40px 0 16px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    & > p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+    }
+
+    & > ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+    }
+  }
+}
+
+.map {
+  width: inherit;
+}
