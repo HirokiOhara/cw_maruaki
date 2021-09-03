@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          node-version: 12.x
+          node-version: 15.x
       - run: npm run generate
         env:
           serviceDOMAIN: "${{ secrets.SERVICE_DOMAIN }}"

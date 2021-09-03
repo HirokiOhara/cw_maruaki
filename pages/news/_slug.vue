@@ -19,7 +19,8 @@ export default {
     const { data } = await axios.get(
       `https://maruaki.microcms.io/api/v1/news/${params.slug}`,
       {
-        headers: { 'X-API-KEY': apiKEY }
+        // headers: { 'X-API-KEY': apiKEY }
+        headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
     return data
