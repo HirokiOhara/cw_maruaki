@@ -1,12 +1,22 @@
-name: Deploy
-on:
+name: Deploy to Firebase Hosting on microCMS
+"on":
   repository_dispatch:
     types: [update_post]
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      SERVICE_DOMAIN: "${{ secrets.SERVICE_DOMAIN }}"
+      API_KEY: "${{ secrets.API_KEY }}"
+      GMAPS_API_KEY: "${{ secrets.GMAPS_API_KEY }}"
     steps:
       - uses: actions/checkout@v2
         with:
           node-version: 15.x
-      - run: npm run generate
+      - run: npm install && npm run generate
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MARUAKI_HP }}"
+          channelId: live
+          projectId: maruaki-hp
