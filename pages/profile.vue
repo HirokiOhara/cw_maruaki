@@ -66,11 +66,6 @@
             </p>
             <!-- ここに地図が入る -->
             <div id="map"></div>
-            <!-- <img
-              class="map"
-              alt="ashido"
-              src="@/static/ishida.jpg"
-            /> -->
           </v-col>
         </v-row>
       </v-col>
