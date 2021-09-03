@@ -29,6 +29,7 @@ export default {
   publicRuntimeConfig: {
     apiKEY: process.env.API_KEY,
     serviceDOMAIN: process.env.SERVICE_DOMAIN,
+    GMapsApiKey: process.env.GMAPS_API_KEY,
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

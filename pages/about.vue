@@ -2,7 +2,7 @@
   <v-container>
     <PageTitle :title="page[0].title" />
     <div class="content-box content-box-body">
-      このサイトは現時点（2021/08/31）、製作中です。<br /><br />
+      このサイトは現時点（2021/08/31）で、製作中です。<br /><br />
       サイトについて、ご意見、ご質問、があれば、「問い合わせ」の「その他」からご連絡ください。<br /><br />
       これからも、丸明造園をよろしくお願いいたします。
     </div>

@@ -50,7 +50,7 @@
           </v-col>
           <v-col cols="9" class="content-box-body">
             <p>
-              埼玉県知事　許可（般-2）　第55971号
+              埼玉県知事  許可（般-2）  第55971号
             </p>
           </v-col>
         </v-row>
@@ -65,11 +65,12 @@
               埼玉県入間市下藤沢1127-8-102
             </p>
             <!-- ここに地図が入る -->
-            <img
+            <div id="map"></div>
+            <!-- <img
               class="map"
               alt="ashido"
               src="@/static/ishida.jpg"
-            />
+            /> -->
           </v-col>
         </v-row>
       </v-col>
@@ -78,6 +79,7 @@
 </template>
 
 <script>
+import { Loader } from "@googlemaps/js-api-loader"
 import PageTitle from '~/components/PageTitle.vue'
 
 export default {
@@ -93,10 +95,76 @@ export default {
       ],
     }
   },
+  mounted() {
+    const loader = new Loader({
+      apiKey: process.env.GMAPS_API_KEY,
+      version: "weekly",
+    });
+    const maruaki = { lat: 35.82340006992925, lng: 139.41465118462636 };
+    loader.load().then(() => {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: maruaki,
+        zoom: 15,
+        mapId: '9345259bedd739a6',
+      });
+      const marker = new google.maps.Marker({
+        position: maruaki,
+        map: map,
+        title: "Hello World!",
+      });
+      // const contentString =
+      //   '<div id="content">' +
+      //   '<div id="siteNotice">' +
+      //   "</div>" +
+      //   '<h1 id="firstHeading" class="firstHeading">有限会社 丸明造園</h1>' +
+      //   '<div id="bodyContent">' +
+      //   "<p>埼玉県入間市下藤沢1127-8-102</p>" +
+      //   '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+      //   "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+      //   "(last visited June 22, 2009).</p>" +
+      //   "</div>" +
+      //   "</div>";
+      // const infowindow = new google.maps.InfoWindow({
+      //   content: contentString,
+      // });
+      // marker.addListener("click", () => {
+      //   infowindow.open({
+      //     anchor: marker,
+      //     map,
+      //     shouldFocus: false,
+      //   });
+      // });
+    });
+  },
 }
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -25.344, lng: 131.036 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+
+}
+
+
+
 </script>
 
 <style scoped lang="scss">
+#map {
+  // height: 100%;
+  height: 500px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .content-box {
   &-title {
     font-weight: 500;
