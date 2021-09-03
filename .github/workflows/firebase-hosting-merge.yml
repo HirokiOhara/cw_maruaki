@@ -9,16 +9,16 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      SERVICE_DOMAIN: "${{ secrets.SERVICE_DOMAIN }}"
+      API_KEY: "${{ secrets.API_KEY }}"
+      GMAPS_API_KEY: "${{ secrets.GMAPS_API_KEY }}"
     steps:
       - uses: actions/checkout@v2
         with:
           node-version: 15.x
       - run: npm install
       - run: npm run generate
-        env:
-          serviceDOMAIN: "${{ secrets.SERVICE_DOMAIN }}"
-          apiKEY: "${{ secrets.API_KEY }}"
-          GMapsApiKey: "${{ secrets.GMAPS_API_KEY }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
