@@ -24,7 +24,7 @@
           <img
             class="re_img"
             alt="tsuyu chan"
-            src="@/static/signature.jpg"
+            src="@/static/signature_ceo.svg"
           />
         </v-col>
       </v-row>
