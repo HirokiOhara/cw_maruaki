@@ -3,7 +3,7 @@
     <main class="content-box">
       <h1 class="content-box-title">{{ title }}</h1>
       <p class="content-box-date">{{ new Date(publishedAt).toLocaleDateString('ja-JP', options[0]) }}</p>
-      <p class="content-box-category">{{ category && category.name }}</p>
+      <!-- <p class="content-box-category">{{ category && category.name }}</p> -->
       <div class="content-box-body" v-html="body"></div>
       <a href="#" onclick="window.history.back(); return false;" class="back-link">一覧に戻る</a>
     </main>
@@ -15,16 +15,23 @@ import axios from 'axios'
 
 export default {
   layout: 'index',
-  async asyncData({ params, $config: { apiKEY } }) {
-    const { data } = await axios.get(
-      `https://maruaki.microcms.io/api/v1/news/${params.slug}`,
-      {
-        headers: { 'X-API-KEY': apiKEY }
-        // headers: { 'X-API-KEY': process.env.API_KEY }
-      }
-    )
-    return data
+  async asyncData({ params, $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'news',
+      contentId: params.slug,
+      queries: { fields: 'title,publishedAt,body' },
+    })
+    return data;
   },
+  // async asyncData({ params, $config: { apiKEY } }) {
+  //   const { data } = await axios.get(
+  //     `https://maruaki.microcms.io/api/v1/news/${params.slug}`,
+  //     {
+  //       headers: { 'X-API-KEY': apiKEY }
+  //     }
+  //   )
+  //   return data
+  // },
   data() {
     return {
       options: [

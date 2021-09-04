@@ -77,6 +77,12 @@
 import { Loader } from "@googlemaps/js-api-loader"
 import PageTitle from '~/components/PageTitle.vue'
 
+const loader = new Loader({
+  apiKey: process.env.GMAPS_API_KEY,
+  version: "weekly",
+});
+const maruaki = { lat: 35.82340006992925, lng: 139.41465118462636 };
+
 export default {
   components: { PageTitle },
   layout: 'index',
@@ -91,11 +97,6 @@ export default {
     }
   },
   mounted() {
-    const loader = new Loader({
-      apiKey: process.env.GMAPS_API_KEY,
-      version: "weekly",
-    });
-    const maruaki = { lat: 35.82340006992925, lng: 139.41465118462636 };
     loader.load().then(() => {
       const map = new google.maps.Map(document.getElementById("map"), {
         center: maruaki,
@@ -131,23 +132,21 @@ export default {
       // });
     });
   },
+  methods: {
+    initMap() {
+      new google.maps.Map(document.getElementById("map"), {
+        center: maruaki,
+        zoom: 15,
+        mapId: '9345259bedd739a6',
+      });
+      new google.maps.Marker({
+        position: maruaki,
+        map: map,
+        title: "Hello World!",
+      });
+    }
+  },
 }
-
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  const uluru = { lat: -25.344, lng: 131.036 };
-  // The map, centered at Uluru
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-  });
-  // The marker, positioned at Uluru
-
-}
-
-
-
 </script>
 
 <style scoped lang="scss">

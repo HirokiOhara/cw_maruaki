@@ -43,25 +43,25 @@ export default {
       items: [
         {
           title: '仕事の依頼・相談',
-          body: '風・降雪等による被害樹への迅速な対応。個人宅は専門担当者を定め、お客様の声を重視し、数年先を考慮してアドバイスを行いながら作業を行います。マンションでは、居住者の皆様が快適に生活が出来る様、年に１・２回程度の改善箇所のご提案、理事会に参加させて頂き、直接ご説明しております。',
+          body: '当社は、個人のお客様やマンションやアパートメントの管理者様、企業の担当者様からのご依頼を承っています。「庭木の手入れ」はもちろん、「不要樹の伐採撤去」や「除草薬剤の散布」などを、お客様のご要望に合わせて提供いたします。また、造園工は草木の手入れをするだけではありません。その景観に合わせた、エクステリアや外構工事なども実施いたしますので、こちらの依頼も承っております。詳しくは、右下のリンクボタンからご確認ください。',
           btn_title: '依頼・相談',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link',
         },
         {
           title: '商品の購入',
-          body: '枝・葉のチップ材や、肥料から、季節限定ではカブトムシの幼虫の販売を行っております。',
+          body: '通年で、枝・葉の混合チップ材を取り扱っています。季節限定では、カブトムシの幼虫の販売を行っております。定期的に商品の入替を行いますので、リンクからご確認ください。',
           btn_title: '購入',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link',
         },
         {
           title: '業務提携の相談',
-          body: '植栽の部分で仕事を配分したいなど。',
+          body: '現在も複数の企業と業務提携をしております。管理会社や建設会社の担当者様で、物件の植栽管理について弊社と仕事をしていただける方を募集しております。ご検討のほど、よろしくお願いいたします。',
           btn_title: 'こちらから',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link',
         },
         {
           title: '技術指導の相談',
-          body: '20年以上植栽に関わってきたノウハウと2級OOを持った職人が複数人在籍しております。植栽に関する疑問を解決することができますので、現場があるなしに関わらず対応します。過去には、公立中学校の生徒を職場体験で受け入れた実績があります。',
+          body: '20年以上植栽に関わってきたノウハウと、2級造園施工管理技士を持った職人が複数人在籍しております。植栽に関する疑問を解決することができますので、現場があるなしに関わらず対応します。過去には、公立中学校の生徒を職場体験で受け入れた実績があります。',
           btn_title: 'こちらから',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link',
         },
@@ -91,7 +91,7 @@ export default {
   }
   &-body {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .contact-btn {
