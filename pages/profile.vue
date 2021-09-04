@@ -78,7 +78,7 @@ import { Loader } from "@googlemaps/js-api-loader"
 import PageTitle from '~/components/PageTitle.vue'
 
 const loader = new Loader({
-  apiKey: "AIzaSyC5eRh5pRXGgvYaJF99T-CriPKspOJX_nw",
+  apiKey: `${ process.env.GMAPS_API_KEY }`,
   version: "weekly",
 });
 const maruaki = { lat: 35.82340006992925, lng: 139.41465118462636 };
