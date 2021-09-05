@@ -1,6 +1,6 @@
 import axios from 'axios'
-require('dotenv').config();
-const { API_KEY, SERVICE_DOMAIN, GMAPS_API_KEY } = process.env;
+// require('dotenv').config();
+const { GMAPS_API_KEY, API_KEY, SERVICE_DOMAIN } = process.env;
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -29,15 +29,15 @@ export default {
   ],
 
   privateRuntimeConfig: {
+    GMapsApiKey: GMAPS_API_KEY,
     apiKey: API_KEY,
     serviceDomain: SERVICE_DOMAIN,
-    GMapsApiKey: GMAPS_API_KEY,
   },
 
   publicRuntimeConfig: {
+    GMapsApiKey: process.env.NODE_ENV !== 'production' ? GMAPS_API_KEY : undefined,
     apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined,
     serviceDomain: process.env.NODE_ENV !== 'production' ? SERVICE_DOMAIN : undefined,
-    GMapsApiKey: process.env.NODE_ENV !== 'production' ? GMAPS_API_KEY : undefined,
   },
 
   // publicRuntimeConfig: {
@@ -45,6 +45,7 @@ export default {
   //   apiKey: process.env.API_KEY,
   //   GMapsApiKey: process.env.GMAPS_API_KEY,
   // },
+
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

@@ -77,15 +77,15 @@
 import { Loader } from "@googlemaps/js-api-loader"
 import PageTitle from '~/components/PageTitle.vue'
 
-const loader = new Loader({
-  apiKey: `${ process.env.GMAPS_API_KEY }`,
-  version: "weekly",
-});
 const maruaki = { lat: 35.82340006992925, lng: 139.41465118462636 };
 
 export default {
   components: { PageTitle },
   layout: 'index',
+  async asyncData({ $config }) {
+    const gmaps_api = $config.GMapsApiKey;
+    return { gmaps_api }
+  },
   data() {
     return {
       page: [
@@ -96,7 +96,11 @@ export default {
       ],
     }
   },
-  created() {
+  mounted() {
+    const loader = new Loader({
+      apiKey: this.gmaps_api,
+      version: "weekly",
+    });
     loader.load().then(() => {
       const map = new google.maps.Map(document.getElementById("map"), {
         center: maruaki,
@@ -132,20 +136,20 @@ export default {
       // });
     });
   },
-  methods: {
-    initMap() {
-      new google.maps.Map(document.getElementById("map"), {
-        center: maruaki,
-        zoom: 15,
-        mapId: '9345259bedd739a6',
-      });
-      new google.maps.Marker({
-        position: maruaki,
-        map: map,
-        title: "Hello World!",
-      });
-    }
-  },
+  // methods: {
+  //   initMap() {
+  //     new google.maps.Map(document.getElementById("map"), {
+  //       center: maruaki,
+  //       zoom: 15,
+  //       mapId: '9345259bedd739a6',
+  //     });
+  //     new google.maps.Marker({
+  //       position: maruaki,
+  //       map: map,
+  //       title: "Hello World!",
+  //     });
+  //   }
+  // },
 }
 </script>
 
