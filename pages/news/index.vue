@@ -40,11 +40,21 @@ export default {
     });
     return data;
   },
+  head: {
+    title: `${this.page[0].title}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '丸明造園から発信している、最新情報の一覧です。'
+      }
+    ],
+  },
   data() {
     return {
       page: [
         {
-          title: '最 新 情 報',
+          title: '最新情報',
           url: '/news',
         },
       ],

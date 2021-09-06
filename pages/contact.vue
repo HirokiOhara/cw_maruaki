@@ -38,6 +38,16 @@ import PageTitle from '~/components/PageTitle.vue'
 export default {
   components: { PageTitle },
   layout: 'index',
+  head: {
+    title: `${this.page[0].title}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '弊社 丸明造園 にご依頼・ご相談がある方は、リンク先のフォームからご連絡ください。'
+      }
+    ],
+  },
   data() {
     return {
       items: [
@@ -74,7 +84,7 @@ export default {
       ],
       page: [
         {
-          title: '問 い 合 わ せ',
+          title: '問い合わせ',
           url: '/contact',
         },
       ],

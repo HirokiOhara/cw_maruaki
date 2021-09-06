@@ -4,7 +4,7 @@
     <div class="content-box">
       <v-row justify="center" align="start">
         <div class="content-box-title vertical-text">
-          社長からの挨拶
+          代表からの挨拶
         </div>
         <v-divider class="mx-4" vertical></v-divider>
         <v-col class="content-box-body" cols="5">
@@ -48,9 +48,7 @@
             </v-col>
             <v-col cols="9">
               <ul>
-                <li>xxやyyを扱える</li>
-                <li>zzやwwについて知識がある</li>
-                <li>行動力・実行力がある人</li>
+                <li>造園に興味がある人</li>
                 <li>元気がある人</li>
               </ul>
             </v-col>
@@ -61,7 +59,7 @@
             </v-col>
             <v-col cols="9">
               <p>
-                月給 20万円〜<br />
+                月給 20万円 〜<br />
                 （※個人の経験・能力を考慮した変動あり）
               </p>
             </v-col>
@@ -117,11 +115,21 @@ import PageTitle from '~/components/PageTitle.vue'
 export default {
   components: { PageTitle },
   layout: 'index',
+  head: {
+    title: `${this.page[0].title}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '私たち 丸明造園 は、一緒に働いてくれる方を募集しています。通年で採用活動を行っていますので、サイトからご応募ください。'
+      }
+    ],
+  },
   data() {
     return {
       page: [
         {
-          title: '採 用 情 報',
+          title: '採用情報',
           url: '/recruit',
         },
       ],

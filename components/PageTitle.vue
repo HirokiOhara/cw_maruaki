@@ -21,5 +21,6 @@ export default {
   font-weight: 400;
   font-size: 64px;
   color: rgb(64,64,64);
+  letter-spacing: 16px;
 }
 </style>
