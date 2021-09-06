@@ -87,7 +87,6 @@ export default {
     return { gmaps_api }
   },
   head: {
-    title: `${this.page[0].title}`,
     meta: [
       {
         hid: 'description',

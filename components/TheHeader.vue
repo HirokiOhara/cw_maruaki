@@ -10,8 +10,8 @@
       <nuxt-link to="/">
         <img
           class="header-logo"
-          alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
-          src="@/static/maruaki_logo.jpg"
+          alt="有限会社 丸明造園"
+          src="@/static/favicon.png"
         />
       </nuxt-link>
       <v-spacer></v-spacer>

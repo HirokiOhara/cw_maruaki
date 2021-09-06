@@ -35,7 +35,6 @@ export default {
   components: { PageTitle },
   layout: 'index',
   head: {
-    title: `${this.page[0].title}`,
     meta: [
       {
         hid: 'description',

@@ -4,8 +4,8 @@
       <div class="home-left">
         <img
           class="home-logo"
-          alt="輝きヒーロー《Can't stop twinkling. （キラキラが止められないよ☆）》"
-          src="@/static/maruaki_logo.jpg"
+          alt="有限会社 丸明造園"
+          src="@/static/favicon.png"
         />
       </div>
       <div class="home-right">
@@ -24,6 +24,15 @@
 <script>
 export default {
   layout: 'home',
+  head: {
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '丸明造園のコーポレートサイトです。'
+      }
+    ],
+  },
   data() {
     return {
       items: [
