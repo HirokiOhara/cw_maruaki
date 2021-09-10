@@ -11,7 +11,7 @@
         <img
           class="header-logo"
           alt="有限会社 丸明造園"
-          src="@/static/favicon.png"
+          src="@/static/logo_default.png"
         />
       </nuxt-link>
       <v-spacer></v-spacer>
