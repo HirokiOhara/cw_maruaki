@@ -5,7 +5,7 @@
         <img
           class="home-logo"
           alt="有限会社 丸明造園"
-          src="@/static/logo_default.png"
+          src="@/static/logo_default.svg"
         />
       </div>
       <div class="home-right">
