@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <PageTitle :title="page[0].title" />
-    <div class="content-box">
+    <!-- <div class="content-box">
       <v-row justify="center" align="start">
         <div class="content-box-title vertical-text">
           代表からの挨拶
@@ -28,7 +28,7 @@
           />
         </v-col>
       </v-row>
-    </div>
+    </div> -->
     <div class="content-box">
       <v-row justify="center" align="start">
         <div class="content-box-title vertical-text">募集要項</div>
