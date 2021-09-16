@@ -99,7 +99,7 @@
             outlined
             color="pink"
             data-cursor-hover
-            href="https://docs.google.com/forms/d/e/1FAIpQLSchzM73zzALKRo6w6AEGzkPVeJ_-LxWPAHYkQl4yptBAHTifg/viewform?usp=sf_link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4VSBwYnN0Oxk6gzd_UXOAw1SCho7947aXAB52I4snZl8wnw/viewform?usp=sf_link"
           >
             応募する
           </v-btn>
