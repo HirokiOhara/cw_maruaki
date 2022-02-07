@@ -120,7 +120,7 @@
             <p class="content-box-body">
               埼玉県入間市下藤沢1127-8-102
             </p>
-            <div id="map"></div>
+            <div id="map2"></div>
           </v-col>
         </v-row>
 
@@ -172,10 +172,15 @@ export default {
         zoom: 15,
         mapId: '9345259bedd739a6',
       });
-      const marker = new google.maps.Marker({
-        position: maruaki,
-        map: map,
-        title: "Hello World!",
+      // const marker = new google.maps.Marker({
+      //   position: maruaki,
+      //   map: map,
+      //   title: "Hello World!",
+      // });
+      const map2 = new google.maps.Map(document.getElementById("map2"), {
+        center: maruaki,
+        zoom: 15,
+        mapId: '9345259bedd739a6',
       });
       // const contentString =
       //   '<div id="content">' +
@@ -220,6 +225,10 @@ export default {
 
 <style scoped lang="scss">
 #map {
+  // height: 100%;
+  height: 500px;
+}
+#map2 {
   // height: 100%;
   height: 500px;
 }
