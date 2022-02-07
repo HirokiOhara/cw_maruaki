@@ -56,10 +56,10 @@ export default {
           title: '会社概要',
           slug: '/profile',
         },
-        {
-          title: 'ブログ',
-          href: 'https://note.com/maruaki_zouen',
-        },
+        // {
+        //   title: 'ブログ',
+        //   href: 'https://note.com/maruaki_zouen',
+        // },
         {
           title: '採用情報',
           slug: '/recruit',
