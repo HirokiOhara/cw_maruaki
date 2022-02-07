@@ -1,6 +1,11 @@
 <template>
-  <h2 class="page-title">
-    {{ title }}
+  <h2>
+    <div class="page-title hidden-sm-and-down">
+      {{ title }}
+    </div>
+    <div class="page-title-responsive hidden-md-and-up">
+      {{ title }}
+    </div>
   </h2>
 </template>
 
@@ -22,5 +27,12 @@ export default {
   font-size: 64px;
   color: rgb(64,64,64);
   letter-spacing: 16px;
+  &-responsive {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: rgb(64,64,64);
+    letter-spacing: 8px;
+  }
 }
 </style>

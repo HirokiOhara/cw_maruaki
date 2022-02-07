@@ -3,7 +3,7 @@
     <PageTitle :title="page[0].title" />
     <div class="content-box">
       <v-col cols="12">
-        <v-row>
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" sm="3" class="content-box-title">
             <p>社名</p>
           </v-col>
@@ -14,7 +14,17 @@
             </p>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">社名</div>
+            <p class="content-box-body">
+              有限会社 丸明造園<br />
+              Maruaki Zouen, Ltd.
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" class="content-box-title">
             <p>創立</p>
           </v-col>
@@ -24,7 +34,16 @@
             </p>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">創立</div>
+            <p class="content-box-body">
+              2000年 １月
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" class="content-box-title">
             <p>代表取締役社長</p>
           </v-col>
@@ -34,7 +53,16 @@
             </p>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">代表取締役社長</div>
+            <p class="content-box-body">
+              大原 隆広
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" class="content-box-title">
             <p>事業内容</p>
           </v-col>
@@ -44,7 +72,16 @@
             </p>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">事業内容</div>
+            <p class="content-box-body">
+              造園工事（植栽工事、広場工事、等）
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" class="content-box-title">
             <p>建設業 許可番号</p>
           </v-col>
@@ -54,7 +91,16 @@
             </p>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">建設業 許可番号</div>
+            <p class="content-box-body">
+              埼玉県知事  許可（般-2）  第55971号
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="hidden-sm-and-down">
           <v-col cols="3" class="content-box-title">
             <p>
               所在地
@@ -68,6 +114,16 @@
             <div id="map"></div>
           </v-col>
         </v-row>
+        <v-row class="hidden-md-and-up">
+          <v-col>
+            <div class="content-box-title">所在地</div>
+            <p class="content-box-body">
+              埼玉県入間市下藤沢1127-8-102
+            </p>
+            <div id="map"></div>
+          </v-col>
+        </v-row>
+
       </v-col>
     </div>
   </v-container>
@@ -174,8 +230,9 @@ html, body {
 }
 .content-box {
   &-title {
-    font-weight: 500;
+    font-weight: 800;
     font-size: 18px;
+    color: gray;
   }
   &-body {
     font-weight: 200;

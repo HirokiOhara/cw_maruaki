@@ -12,12 +12,21 @@
               nuxt
             >
               <v-list-item two-line>
-                <v-list-item-content>
+
+                <v-list-item-content class="hidden-sm-and-down">
                   <v-list-item-title v-text="content.title" class="content-box-title" />
                   <v-list-item-subtitle class="content-box-body">
                     {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
                   </v-list-item-subtitle>
                 </v-list-item-content>
+
+                <v-list-item-content class="hidden-md-and-up">
+                  <v-list-item-title v-text="content.title" class="content-box-title-responsive" />
+                  <v-list-item-subtitle class="content-box-body-responsive">
+                    {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
+                  </v-list-item-subtitle>
+                </v-list-item-content>
+
               </v-list-item>
             </v-card>
           </v-hover>
@@ -78,10 +87,18 @@ export default {
   &-title {
     font-weight: 400;
     font-size: 32px;
+    &-responsive {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
   }
   &-body {
     font-weight: 300;
     font-size: 16px;
+    &-responsive {
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
   }
 }
 </style>

@@ -1,8 +1,8 @@
 import axios from 'axios'
 // require('dotenv').config();
 const { GMAPS_API_KEY, API_KEY, SERVICE_DOMAIN, GANA_ID } = process.env;
-const TITLE = '有限会社丸明造園'
-const DESCRIPTION = '私たち 丸明造園 は、「庭師を源流とする造園技能を引き継ぐ」少数精鋭集団です。埼玉県の入間市・所沢市を中心に、庭木の手入れ（植木・ガーデニング）からマンションの植栽管理まで、幅広く対応しております。お気軽にご相談くださいませ。'
+const TITLE = '有限会社 丸明造園'
+const DESCRIPTION = '私たち 丸明造園 は、「庭師を源流とする造園技能を引き継ぐ」少数精鋭集団です。埼玉県の入間市・所沢市を中心に、庭木の手入れ（植木・ガーデニング）からマンションの植栽管理まで、幅広く対応しております。お気軽にご相談ください。'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target

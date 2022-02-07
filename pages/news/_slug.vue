@@ -49,6 +49,11 @@ export default {
 
 <style scoped lang="scss">
 .content-box {
+  @media screen and (max-width: 960px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   &-title {
     font-weight: 400;
     font-size: 32px;
@@ -57,6 +62,9 @@ export default {
   // "<style lang="scss" scoped>"にすると、レンダリング後のコードで[data-v-489ba8f2]見たいのがついてきて、下のネストが適用されない
   &-body {
     margin: 100px 0;
+    @media screen and (max-width: 960px) {
+      margin: 50px 0;
+    }
     font-family: "Noto Serif JP", serif;
   }
   &-date {

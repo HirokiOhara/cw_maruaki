@@ -2,14 +2,31 @@
 $toolbar-content-padding-x: 0px;
 
 header {
+  @media screen and (max-width: 960px) {
+    height: 100px !important;
+  }
   .v-btn.v-size--default {
     font-size: 1rem;
+  }
+  .v-toolbar__content {
+    @media screen and (max-width: 960px) {
+      height: 100px !important;
+    }
+  }
+}
+
+main.v-main {
+  @media screen and (max-width: 960px) {
+    padding: 100px 0px 0px !important;
   }
 }
 
 .header {
   &-logo {
     width: 100px;
+    &-responsive {
+      width: 50px;
+    }
   }
   &-link {
     font-family: "Noto Serif JP", serif;
@@ -34,6 +51,14 @@ footer {
   position: relative;
   min-height: 700px;
   height: 100vh;
+  &-responsive {
+    position: relative;
+    font-size: 1.3rem;
+    margin: 50px 0;
+    max-width: 500px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   &-left {
     width: 500px;
     height: 500px;
@@ -74,8 +99,16 @@ footer {
 
 .content-box {
   margin: 100px 0;
+  @media screen and (max-width: 960px) {
+    margin: 50px 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   &-title {
     font-family: "Noto Serif JP", serif;
+    &-responsive {
+      font-family: "Noto Serif JP", serif;
+    }
   }
   &-body {
     font-family: "Noto Serif JP", serif;
@@ -105,6 +138,10 @@ footer {
     & > ol {
       list-style-type: decimal;
       list-style-position: inside;
+    }
+
+    &-responsive {
+      font-family: "Noto Serif JP", serif;
     }
   }
 }

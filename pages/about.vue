@@ -15,15 +15,21 @@
         Google Analyticsは、Cookieという仕組みを利用して情報の収集を行います。<br /><br />
         収集している内容や方法については、下記のリンクからご確認ください。
       </p><br />
-      <a href="https://policies.google.com/technologies/partner-sites?hl=ja">
-        収集した情報の GOOGLE による使用
-      </a><br />
-      <a href="https://policies.google.com/technologies/cookies?hl=ja">
-        GOOGLE による COOKIE の利用方法
-      </a><br />
-      <a href="https://policies.google.com/technologies/cookies?hl=ja#types-of-cookies">
-        GOOGLE が使用している COOKIE の種類
-      </a>
+      <v-row>
+        <v-col>
+          <ul>
+            <li>
+              <a href="https://policies.google.com/technologies/partner-sites?hl=ja">収集した情報の Google による使用</a>
+            </li>
+            <li>
+              <a href="https://policies.google.com/technologies/cookies?hl=ja">Google による Cokkie の利用方法</a>
+            </li>
+            <li>
+              <a href="https://policies.google.com/technologies/cookies?hl=ja#types-of-cookies">Google が使用している Cokkie の種類</a>
+            </li>
+          </ul>
+        </v-col>
+      </v-row>
     </div>
   </v-container>
 </template>

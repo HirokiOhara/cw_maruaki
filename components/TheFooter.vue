@@ -31,7 +31,7 @@ export default {
       items: [
         {
           title: 'ブログ',
-          href: 'https://note.com/maruaki_zouen',
+          slug: 'https://note.com/maruaki_zouen',
         },
         {
           title: 'サイトについて',
