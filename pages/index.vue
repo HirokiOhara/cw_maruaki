@@ -5,7 +5,7 @@
         <img
           class="home-logo"
           alt="有限会社 丸明造園"
-          src="@/static/logo_default.svg"
+          src="@/static/logo_moji.png"
         />
       </div>
       <div class="home-right">
@@ -26,6 +26,12 @@
           </nuxt-link>
         </v-col>
       </v-row>
+      <div>
+        <img
+          class="home-matsu"
+          src="@/static/matsu.png"
+        />
+      </div>
     </div>
   </v-container>
 </template>

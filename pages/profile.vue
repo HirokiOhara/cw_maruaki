@@ -172,15 +172,18 @@ export default {
         zoom: 15,
         mapId: '9345259bedd739a6',
       });
-      // const marker = new google.maps.Marker({
-      //   position: maruaki,
-      //   map: map,
-      //   title: "Hello World!",
-      // });
       const map2 = new google.maps.Map(document.getElementById("map2"), {
         center: maruaki,
         zoom: 15,
         mapId: '9345259bedd739a6',
+      });
+      const marker = new google.maps.Marker({
+        position: maruaki,
+        map: map,
+      });
+      const marker2 = new google.maps.Marker({
+        position: maruaki,
+        map: map2,
       });
       // const contentString =
       //   '<div id="content">' +
