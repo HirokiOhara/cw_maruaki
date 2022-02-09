@@ -3,34 +3,34 @@
     <PageTitle :title="page[0].title" />
     <div class="content-box">
       <v-row v-for="content in contents" :key="content.id">
-        <v-col>
-          <v-hover v-slot="{ hover }">
-            <v-card
-              :class="{ 'on-hover': hover }"
-              :to="`news/${content.id}`"
-              flat
-              nuxt
-            >
-              <v-list-item two-line>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :class="{ 'on-hover': hover }"
+            :to="`news/${content.id}`"
+            flat
+            nuxt
+          >
+            <v-list-item two-line>
 
-                <v-list-item-content class="hidden-sm-and-down">
-                  <v-list-item-title v-text="content.title" class="content-box-title" />
-                  <v-list-item-subtitle class="content-box-body">
-                    {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
-                  </v-list-item-subtitle>
-                </v-list-item-content>
+              <v-list-item-content class="hidden-sm-and-down">
+                <h2>
+                  <v-list-item-title v-text="content.title" class="news-title" />
+                </h2>
+                <v-list-item-subtitle class="news-date">
+                  {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
 
-                <v-list-item-content class="hidden-md-and-up">
-                  <v-list-item-title v-text="content.title" class="content-box-title-responsive" />
-                  <v-list-item-subtitle class="content-box-body-responsive">
-                    {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
-                  </v-list-item-subtitle>
-                </v-list-item-content>
+              <v-list-item-content class="hidden-md-and-up">
+                <v-list-item-title v-text="content.title" class="news-title-responsive" />
+                <v-list-item-subtitle class="news-date-responsive">
+                  {{ new Date(content.publishedAt).toLocaleDateString('ja-JP', options[0]) }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
 
-              </v-list-item>
-            </v-card>
-          </v-hover>
-        </v-col>
+            </v-list-item>
+          </v-card>
+        </v-hover>
       </v-row>
     </div>
   </v-container>
@@ -82,23 +82,5 @@ export default {
 <style scoped lang="scss">
 .v-card.on-hover {
   background-color: rgb(250, 250, 250);
-}
-.content-box {
-  &-title {
-    font-weight: 400;
-    font-size: 32px;
-    &-responsive {
-      font-weight: 400;
-      font-size: 1.3rem;
-    }
-  }
-  &-body {
-    font-weight: 300;
-    font-size: 16px;
-    &-responsive {
-      font-weight: 300;
-      font-size: 0.9rem;
-    }
-  }
 }
 </style>

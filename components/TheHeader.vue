@@ -8,11 +8,14 @@
   >
     <v-container class="fill-height header-box">
       <nuxt-link to="/">
+        <!-- PC用 -->
         <img
           class="header-logo hidden-sm-and-down"
           alt="有限会社 丸明造園"
           src="@/static/logo_default.svg"
         />
+
+        <!-- スマホ・タブレット用 -->
         <img
           class="header-logo-responsive hidden-md-and-up"
           alt="有限会社 丸明造園"
@@ -20,6 +23,7 @@
         />
       </nuxt-link>
       <v-spacer></v-spacer>
+      <!-- PC用 -->
       <v-btn
         class="header-link hidden-sm-and-down"
         v-for="item in items" :key="item.title" :to="item.slug"

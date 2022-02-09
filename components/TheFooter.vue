@@ -17,7 +17,7 @@
       >
         {{ item.title }}
       </v-btn>
-      <v-col class="py-4 text-center black--text" cols="12">
+      <v-col class="py-4 text-center footer-name" cols="12">
         © {{ new Date().getFullYear() }} 有限会社 丸明造園
       </v-col>
     </v-row>

@@ -1,131 +1,151 @@
 <template>
   <v-container>
     <PageTitle :title="page[0].title" />
-    <div class="content-box">
-      <v-col cols="12">
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" sm="3" class="content-box-title">
-            <p>社名</p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
-            <p>
-              有限会社 丸明造園<br />
-              Maruaki Zouen, Ltd.
-            </p>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">社名</div>
-            <p class="content-box-body">
-              有限会社 丸明造園<br />
-              Maruaki Zouen, Ltd.
-            </p>
-          </v-col>
-        </v-row>
+<!-- PC用 -->
+    <div class="content-box hidden-sm-and-down">
+      <v-row>
+        <v-col cols="3" sm="3" class="content-box-body">
+          <h3>社名</h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            有限会社 丸明造園<br />
+            Maruaki Zouen, Ltd.
+          </p>
+        </v-col>
+      </v-row>
 
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" class="content-box-title">
-            <p>創立</p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
+      <v-row>
+        <v-col cols="3" class="content-box-body">
+          <h3>創立</h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            2000年 1月
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="3" class="content-box-body">
+          <h3>代表取締役社長</h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            大原 隆広
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="3" class="content-box-body">
+          <h3>事業内容</h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            造園工事（植栽工事、広場工事、等）
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="3" class="content-box-body">
+          <h3>建設業 許可番号</h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            埼玉県知事  許可（般-2）  第55971号
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="3" class="content-box-body">
+          <h3>
+            所在地
+          </h3>
+        </v-col>
+        <v-col cols="9" class="content-box-body">
+          <p>
+            埼玉県入間市下藤沢1127-8-102
+          </p>
+          <div id="map"></div>
+        </v-col>
+      </v-row>
+    </div>
+
+<!-- スマホ・タブレット用 -->
+    <div class="content-box hidden-md-and-up">
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>社名</h3>
+          </div>
+          <p class="content-box-body">
+            有限会社 丸明造園<br />
+            Maruaki Zouen, Ltd.
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>創立</h3>
             <p>
-              2000年 1月
-            </p>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">創立</div>
-            <p class="content-box-body">
               2000年 １月
             </p>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
+      </v-row>
 
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" class="content-box-title">
-            <p>代表取締役社長</p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>代表取締役社長</h3>
             <p>
               大原 隆広
             </p>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">代表取締役社長</div>
-            <p class="content-box-body">
-              大原 隆広
-            </p>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
+      </v-row>
 
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" class="content-box-title">
-            <p>事業内容</p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>事業内容</h3>
             <p>
               造園工事（植栽工事、広場工事、等）
             </p>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">事業内容</div>
-            <p class="content-box-body">
-              造園工事（植栽工事、広場工事、等）
-            </p>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
+      </v-row>
 
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" class="content-box-title">
-            <p>建設業 許可番号</p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>建設業 許可番号</h3>
             <p>
               埼玉県知事  許可（般-2）  第55971号
             </p>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">建設業 許可番号</div>
-            <p class="content-box-body">
-              埼玉県知事  許可（般-2）  第55971号
-            </p>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
+      </v-row>
 
-        <v-row class="hidden-sm-and-down">
-          <v-col cols="3" class="content-box-title">
-            <p>
-              所在地
-            </p>
-          </v-col>
-          <v-col cols="9" class="content-box-body">
+      <v-row>
+        <v-col>
+          <div class="content-box-body">
+            <h3>所在地</h3>
             <p>
               埼玉県入間市下藤沢1127-8-102
             </p>
-            <!-- ここに地図が入る -->
-            <div id="map"></div>
-          </v-col>
-        </v-row>
-        <v-row class="hidden-md-and-up">
-          <v-col>
-            <div class="content-box-title">所在地</div>
-            <p class="content-box-body">
-              埼玉県入間市下藤沢1127-8-102
-            </p>
-            <div id="map2"></div>
-          </v-col>
-        </v-row>
-
-      </v-col>
+          </div>
+          <div id="map2"></div>
+        </v-col>
+      </v-row>
     </div>
+
+
   </v-container>
 </template>
 
@@ -239,16 +259,5 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-.content-box {
-  &-title {
-    font-weight: 800;
-    font-size: 18px;
-    color: gray;
-  }
-  &-body {
-    font-weight: 200;
-    font-size: 18px;
-  }
 }
 </style>

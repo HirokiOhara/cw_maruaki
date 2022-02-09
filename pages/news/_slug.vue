@@ -1,12 +1,38 @@
 <template>
   <v-container>
-    <main class="content-box">
-      <h1 class="content-box-title">{{ title }}</h1>
-      <p class="content-box-date">{{ new Date(publishedAt).toLocaleDateString('ja-JP', options[0]) }}</p>
+<!-- PC用 -->
+    <div class="content-box hidden-sm-and-down">
+      <h1 class="news-title">{{ title }}</h1>
+      <p class="news-date">{{ new Date(publishedAt).toLocaleDateString('ja-JP', options[0]) }}</p>
       <!-- <p class="content-box-category">{{ category && category.name }}</p> -->
-      <div class="content-box-body" v-html="body"></div>
-      <a href="#" onclick="window.history.back(); return false;" class="back-link">一覧に戻る</a>
-    </main>
+    </div>
+<!-- スマホ・タブレット用 -->
+    <div class="content-box hidden-md-and-up">
+      <h1 class="news-title-responsive">{{ title }}</h1>
+      <p class="news-date-responsive">{{ new Date(publishedAt).toLocaleDateString('ja-JP', options[0]) }}</p>
+    </div>
+
+    <div class="content-box">
+      <div class="content-box-body">
+        <p v-html="body" />
+      </div>
+      <!-- <a href="#" onclick="window.history.back(); return false;" class="back-link">一覧に戻る</a> -->
+      <br /><br />
+      <v-row>
+        <v-col justify="center" cols="3" class="contact-btn">
+          <v-btn
+            block
+            large
+            outlined
+            color="gray"
+            class="content-box-body"
+            onclick="window.history.back(); return false;"
+          >
+            {{ "一覧に戻る" }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
@@ -48,44 +74,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.content-box {
-  @media screen and (max-width: 960px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  &-title {
-    font-weight: 400;
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  // "<style lang="scss" scoped>"にすると、レンダリング後のコードで[data-v-489ba8f2]見たいのがついてきて、下のネストが適用されない
-  &-body {
-    margin: 100px 0;
-    @media screen and (max-width: 960px) {
-      margin: 50px 0;
-    }
-    font-family: "Noto Serif JP", serif;
-  }
-  &-date {
-    font-family: "Noto Serif JP", serif;
-    font-size: 16px;
-    color: rgba(0,0,0, 0.6);
-    font-weight: 400;
-  }
-  &-category {
-    font-family: "Noto Serif JP", serif;
-    margin-bottom: 40px;
-  }
-}
-.back-link {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 600;
-  transition: 0.28s;
-  color: rgba(1, 1, 1, 0.68);
-  text-decoration: none;
-  &:hover {
-    color: rgba(1, 1, 1, 1);
-  }
-}
 </style>

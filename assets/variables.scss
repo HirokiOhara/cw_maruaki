@@ -45,6 +45,56 @@ footer {
     font-family: "Noto Serif JP", serif;
     font-weight: 400;
   }
+  &-name {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(1, 1, 1, 0.68);
+  }
+}
+
+.page-title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: rgb(64, 64, 64);
+  letter-spacing: 16px;
+  &-responsive {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: rgb(64, 64, 64);
+    letter-spacing: 8px;
+  }
+}
+
+.news {
+  &-title {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-size: 32px;
+    &-responsive {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 400;
+      font-size: 26px;
+    }
+  }
+  &-date {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: gray;
+    &-responsive {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: gray;
+    }
+  }
+}
+
+.contact-btn {
+  margin-top: auto;
 }
 
 .home {
@@ -110,12 +160,6 @@ footer {
     padding-left: 24px;
     padding-right: 24px;
   }
-  &-title {
-    font-family: "Noto Serif JP", serif;
-    &-responsive {
-      font-family: "Noto Serif JP", serif;
-    }
-  }
   &-body {
     font-family: "Noto Serif JP", serif;
     & > h1 {
@@ -130,8 +174,15 @@ footer {
     & > h2 {
       font-size: 24px;
       font-weight: 400;
-      margin: 40px 0 16px;
-      border-bottom: 1px solid #ddd;
+      margin: 20px 0;
+      // border-bottom: 1px solid #ddd;
+    }
+
+    & > h3 {
+      font-weight: 800;
+      font-size: 18px;
+      color: gray;
+      // margin: 20px 0;
     }
 
     & > p {
@@ -144,6 +195,13 @@ footer {
     & > ol {
       list-style-type: decimal;
       list-style-position: inside;
+    }
+
+    & > v-btn {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.8;
+      letter-spacing: 0.2px;
     }
 
     &-responsive {

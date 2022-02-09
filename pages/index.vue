@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <!-- PC用 -->
     <div class="home hidden-sm-and-down">
       <div class="home-left">
         <img
@@ -18,6 +19,8 @@
         </v-row>
       </div>
     </div>
+
+    <!-- スマホ・タブレット用 -->
     <div class="home-responsive hidden-md-and-up">
       <v-row v-for="item in items" :key="item.title">
         <v-col>
