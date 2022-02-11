@@ -26,7 +26,7 @@
           <br />
           <img
             class="re_img"
-            alt="tsuyu chan"
+            alt="Signature"
             src="@/static/signature_ceo.svg"
           />
         </v-col>
@@ -112,15 +112,15 @@
           </p>
           <v-row justify="end">
             <v-col cols="7">
-              <!-- <img
+              <img
                 class="re_img"
-                alt="ashido"
+                alt="Takahiro Ohara"
                 src="@/static/portrait.jpg"
-              /> -->
+              />
               <br />
               <img
                 class="re_img"
-                alt="tsuyu chan"
+                alt="Signature"
                 src="@/static/signature_ceo.svg"
               />
             </v-col>
