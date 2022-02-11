@@ -18,11 +18,11 @@
           </p>
         </v-col>
         <v-col cols="5">
-          <!-- <img
+          <img
             class="re_img"
-            alt="ashido"
+            alt="Takahiro Ohara"
             src="@/static/portrait.jpg"
-          /> -->
+          />
           <br />
           <img
             class="re_img"

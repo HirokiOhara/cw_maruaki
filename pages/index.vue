@@ -6,7 +6,7 @@
         <img
           class="home-logo"
           alt="有限会社 丸明造園"
-          src="@/static/logo_moji.png"
+          src="@/static/logo_moji.svg"
         />
       </div>
       <div class="home-right">
