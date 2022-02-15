@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-title-width">
     <h1 class="page-title hidden-sm-and-down">
         {{ title }}
     </h1>

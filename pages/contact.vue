@@ -87,12 +87,12 @@ export default {
       items: [
         {
           title: '仕事の依頼・相談',
-          body: '「庭木の手入れ」から「不要樹の伐採撤去」、「除草薬剤の散布」など、お客様のご要望に合わせて提供いたします。また、その景観に合わせた、エクステリアや外構工事なども実施いたします。',
+          body: '庭木の手入れ、不要樹の伐採撤去、除草薬剤の散布など、お客様のご要望に合わせて提供いたします。また、その景観に合わせた、エクステリアや外構工事なども実施いたします。詳しくは、「業務内容」を御覧ください。',
           btn_title: 'こちら',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSccMG5I6qhQT7gkI2woqB_7oqDdk1MdLKA4_FyFGcAGo5V0wg/viewform?usp=sf_link',
         },
         {
-          title: '商品の購入',
+          title: '販売',
           body: '通年で、枝・葉の混合チップ材を取り扱っています。季節限定では、カブトムシの幼虫の販売を行っております。また、定期的に商品の入替を行います。',
           btn_title: 'こちら',
           btn_href: 'https://docs.google.com/forms/d/e/1FAIpQLSduISg7rOMrPaGhiZ-M-tNnLjHY_poJENJjQBFC7cU2X-0wuw/viewform?usp=sf_link',

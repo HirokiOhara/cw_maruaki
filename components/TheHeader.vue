@@ -2,7 +2,7 @@
   <v-app-bar
     app
     fixed
-    height="200"
+    height="160"
     flat
     color="rgba(255,255,255,0.9)"
   >
@@ -12,14 +12,14 @@
         <img
           class="header-logo hidden-sm-and-down"
           alt="有限会社 丸明造園"
-          src="@/static/logo_default.svg"
+          src="@/static/logo_maruaki_black.svg"
         />
 
         <!-- スマホ・タブレット用 -->
         <img
           class="header-logo-responsive hidden-md-and-up"
           alt="有限会社 丸明造園"
-          src="@/static/logo_default.svg"
+          src="@/static/logo_maruaki_black.svg"
         />
       </nuxt-link>
       <v-spacer></v-spacer>

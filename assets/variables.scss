@@ -23,7 +23,7 @@ main.v-main {
 
 .header {
   &-logo {
-    width: 100px;
+    width: 80px;
     &-responsive {
       width: 50px;
     }
@@ -50,6 +50,12 @@ footer {
     font-weight: 400;
     font-size: 1rem;
     color: rgba(1, 1, 1, 0.68);
+    &-dark {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
   }
 }
 
@@ -59,12 +65,32 @@ footer {
   font-size: 64px;
   color: rgb(64, 64, 64);
   letter-spacing: 16px;
+  &-dark {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 16px;
+    text-align: center;
+  }
   &-responsive {
     font-family: "Noto Serif JP", serif;
     font-weight: 400;
     font-size: 48px;
     color: rgb(64, 64, 64);
     letter-spacing: 8px;
+    &-dark {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 400;
+      font-size: 48px;
+      color: rgb(255, 255, 255);
+      letter-spacing: 8px;
+      text-align: center;
+    }
+  }
+  &-width {
+    max-width: 1000px;
+    margin: auto;
   }
 }
 

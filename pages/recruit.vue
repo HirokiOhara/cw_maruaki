@@ -112,11 +112,24 @@
           </p>
           <v-row justify="end">
             <v-col cols="7">
-              <img
+              <v-img
                 class="re_img"
                 alt="Takahiro Ohara"
                 src="@/static/portrait.jpg"
-              />
+              >
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row>
+                </template>
+              </v-img>
               <br />
               <img
                 class="re_img"
