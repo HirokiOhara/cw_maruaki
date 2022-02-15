@@ -127,6 +127,7 @@ export default {
   },
 
   generate: {
+    fallback: true,
     async routes() {
       const pages = await axios
         .get('https://maruaki.microcms.io/api/v1/news?limit=10', {
