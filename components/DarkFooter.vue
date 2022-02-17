@@ -2,7 +2,7 @@
   <v-footer
     height="200"
     padless
-    color="rgba(85, 87, 108, 0.9)"
+    color="rgba(24, 27, 57)"
   >
     <v-row justify="center" no-gutters class="footer-link">
       <v-btn

@@ -58,10 +58,10 @@ export default {
           title: '最新情報',
           slug: '/news',
         },
-        // {
-        //   title: '業務内容',
-        //   slug: '/works',
-        // },
+        {
+          title: '業務内容',
+          slug: '/works',
+        },
         {
           title: '問い合わせ',
           slug: '/contact',

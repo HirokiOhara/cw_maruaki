@@ -186,6 +186,12 @@ footer {
     padding-left: 24px;
     padding-right: 24px;
   }
+  &-dark {
+    padding: 0 0 300px;
+    &-responsive {
+      padding: 0 0 150px;
+    }
+  }
   &-body {
     font-family: "Noto Serif JP", serif;
     & > h1 {

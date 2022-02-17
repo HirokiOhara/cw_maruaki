@@ -4,8 +4,7 @@
     fixed
     height="160"
     flat
-    color="rgba(85, 87, 108, 0.9)"
-    hide-on-scroll
+    color="rgba(24, 27, 57, 0.8)"
   >
     <v-container class="fill-height header-box">
       <nuxt-link to="/">

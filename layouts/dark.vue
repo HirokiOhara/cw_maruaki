@@ -23,7 +23,7 @@ export default {
   max-width: 100%;
 }
 .theme--light.v-application {
-  background-color: rgba($color: #55576c, $alpha: 1.0);
+  background-color: rgba($color: #181B39, $alpha: 1.0);
 }
 // h1 {
 //   color: white !important;
