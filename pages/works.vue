@@ -19,7 +19,7 @@
                   :lazy-src="`https://picsum.photos/16/9`"
                 >
                   <template v-slot:placeholder>
-                    <v-row
+                    <!-- <v-row
                       class="fill-height ma-0"
                       align="center"
                       justify="center"
@@ -28,7 +28,8 @@
                         indeterminate
                         color="grey lighten-5"
                       ></v-progress-circular>
-                    </v-row>
+                    </v-row> -->
+                    <LoadingImg />
                   </template>
                   <v-overlay
                     absolute
@@ -54,10 +55,26 @@
       <div class="content-box-dark content-box-body">
         <v-row>
           <v-col cols="6">
-            <v-img height="500" src="/shokusai/before.svg"></v-img>
+            <v-img
+              height="500"
+              src="/shokusai/before.svg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="6">
-            <v-img height="500" src="/shokusai/after.svg"></v-img>
+            <v-img
+              height="500"
+              src="/shokusai/after.svg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start">
@@ -82,7 +99,15 @@
       <div class="content-box-dark content-box-body">
         <v-row justify="center">
           <v-col cols="6">
-            <v-img height="500" src="/shokusai/06.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/shokusai/06.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
             <h3>
@@ -119,7 +144,16 @@
             </div>
           </v-col>
           <v-col cols="4">
-            <v-img contain height="500" src="/shokusai/15.jpg"></v-img>
+            <v-img
+              contain
+              height="500"
+              src="/shokusai/15.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
       </div>
@@ -127,10 +161,26 @@
       <div class="content-box-dark content-box-body">
         <v-row>
           <v-col cols="6">
-            <v-img height="500" src="/shokusai/13.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/shokusai/13.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="6">
-            <v-img height="500" src="/shokusai/14.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/shokusai/14.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start">
@@ -183,8 +233,16 @@
             </div>
           </v-col>
           <v-col cols="6">
-            <v-img height="500" src="/seko/02.jpg"></v-img>
-            <v-img height="500" src="/seko/04.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/seko/02.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
+            <v-img height="500" src="/seko/04.jpg" :lazy-src="`https://picsum.photos/16/9`"></v-img>
           </v-col>
         </v-row>
       </div>
@@ -199,13 +257,34 @@
         </v-row>
         <v-row>
           <v-col cols="4">
-            <v-img src="/seko/05.jpg"></v-img>
+            <v-img
+              src="/seko/05.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
-            <v-img src="/seko/06.jpg"></v-img>
+            <v-img
+              src="/seko/06.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
-            <v-img src="/seko/08.jpg"></v-img>
+            <v-img
+              src="/seko/08.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row>
@@ -225,7 +304,15 @@
       <div class="content-box-dark content-box-body">
         <v-row>
           <v-col cols="6">
-            <v-img height="500" src="/seko/15.jpeg"></v-img>
+            <v-img
+              height="500"
+              src="/seko/15.jpeg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4" class="d-flex test2">
             <div>
@@ -242,7 +329,15 @@
         </v-row>
         <v-row>
           <v-col cols="6">
-            <v-img height="500" src="/seko/14.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/seko/14.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
             <p>
@@ -269,7 +364,15 @@
       <div class="content-box-dark content-box-body">
         <v-row justify="center">
           <v-col cols="8">
-            <v-img height="700" src="/zouen/warabocchi.svg"></v-img>
+            <v-img
+              height="700"
+              src="/zouen/warabocchi.svg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -292,7 +395,15 @@
       <div class="content-box-dark content-box-body">
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="3">
-            <v-img height="500" src="/zouen/04.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/zouen/04.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4" class="d-flex test3" style="height: 500px;">
             <div>
@@ -310,7 +421,15 @@
             </div>
           </v-col>
           <v-col cols="3">
-            <v-img height="500" src="/zouen/06.jpg"></v-img>
+            <v-img
+              height="500"
+              src="/zouen/06.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
       </div>
@@ -329,13 +448,34 @@
       <div class="content-box-dark content-box-body">
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="4">
-            <v-img src="/zouen/08.jpg"></v-img>
+            <v-img
+              src="/zouen/08.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
-            <v-img src="/zouen/09.jpg"></v-img>
+            <v-img
+              src="/zouen/09.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="4">
-            <v-img src="/zouen/10.jpg"></v-img>
+            <v-img
+              src="/zouen/10.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
@@ -383,16 +523,7 @@
               :lazy-src="`https://picsum.photos/16/9`"
             >
               <template v-slot:placeholder>
-                <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-                >
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
+                <LoadingImg />
               </template>
               <v-overlay absolute>
                 <v-row justify="center">
@@ -452,7 +583,14 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row justify="center">
           <v-col cols="12">
-            <v-img contain src="/shokusai/06.jpg"></v-img>
+            <v-img
+              contain src="/shokusai/06.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="10">
             <h3>
@@ -472,7 +610,15 @@
         </v-row>
         <v-row justify="center">
           <v-col cols="12">
-            <v-img contain src="/shokusai/15.jpg"></v-img>
+            <v-img
+              contain
+              src="/shokusai/15.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="10" class="d-flex test2">
             <div>
@@ -497,8 +643,22 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row>
           <v-col cols="12">
-            <v-img src="/shokusai/13.jpg"></v-img>
-            <v-img src="/shokusai/14.jpg"></v-img>
+            <v-img
+              src="/shokusai/13.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
+            <v-img
+              src="/shokusai/14.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start">
@@ -549,8 +709,22 @@
             </div>
           </v-col>
           <v-col cols="12">
-            <v-img src="/seko/02.jpg"></v-img>
-            <v-img src="/seko/04.jpg"></v-img>
+            <v-img
+              src="/seko/02.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
+            <v-img
+              src="/seko/04.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
       </div>
@@ -594,7 +768,14 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row justify="center">
           <v-col cols="12">
-            <v-img src="/seko/15.jpeg"></v-img>
+            <v-img
+              src="/seko/15.jpeg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="10" class="d-flex test2">
             <div>
@@ -611,7 +792,14 @@
         </v-row>
         <v-row justify="center">
           <v-col cols="12">
-            <v-img src="/seko/14.jpg"></v-img>
+            <v-img
+              src="/seko/14.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
           <v-col cols="10">
             <p>
@@ -636,7 +824,14 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row justify="center">
           <v-col cols="12">
-            <v-img src="/zouen/warabocchi.svg"></v-img>
+            <v-img
+              src="/zouen/warabocchi.svg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -659,7 +854,14 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="12">
-            <v-img src="/zouen/04.jpg"></v-img>
+            <v-img
+              src="/zouen/04.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
@@ -681,7 +883,14 @@
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="12">
-            <v-img src="/zouen/06.jpg"></v-img>
+            <v-img
+              src="/zouen/06.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
       </div>
@@ -700,7 +909,14 @@
       <div class="content-box-dark-responsive content-box-body">
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="12">
-            <v-img src="/zouen/08.jpg"></v-img>
+            <v-img
+              src="/zouen/08.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
@@ -712,7 +928,14 @@
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="12">
-            <v-img src="/zouen/09.jpg"></v-img>
+            <v-img
+              src="/zouen/09.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
@@ -731,7 +954,14 @@
         </v-row>
         <v-row justify="center" align="start" class="content-box-body">
           <v-col cols="12">
-            <v-img src="/zouen/10.jpg"></v-img>
+            <v-img
+              src="/zouen/10.jpg"
+              :lazy-src="`https://picsum.photos/16/9`"
+            >
+              <template v-slot:placeholder>
+                <LoadingImg />
+              </template>
+            </v-img>
           </v-col>
         </v-row>
       </div>
@@ -741,9 +971,10 @@
 
 <script>
 import Carousel from '~/components/CarouselSeko.vue'
+import LoadingImg from '~/components/LoadingImg.vue'
 
 export default {
-  components: { Carousel },
+  components: { Carousel, LoadingImg },
   layout: 'dark',
   head: {
     meta: [
