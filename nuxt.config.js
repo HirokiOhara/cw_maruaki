@@ -23,7 +23,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
-    ]
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -69,6 +69,7 @@ export default {
   modules: [
     'nuxt-microcms-module',
     '@nuxtjs/google-gtag',
+    '@nuxtjs/gtm',
   ],
   'google-gtag': {
     id: process.env.GANA_ID,
@@ -87,6 +88,9 @@ export default {
     //     send_page_view: false // optional configurations
     //   }
     // }]
+  },
+  gtm: {
+    id: process.env.GTM_ID, // タグマネージャーのid
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

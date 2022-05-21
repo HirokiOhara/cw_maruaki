@@ -19,16 +19,6 @@
                   :lazy-src="`https://picsum.photos/16/9`"
                 >
                   <template v-slot:placeholder>
-                    <!-- <v-row
-                      class="fill-height ma-0"
-                      align="center"
-                      justify="center"
-                    >
-                      <v-progress-circular
-                        indeterminate
-                        color="grey lighten-5"
-                      ></v-progress-circular>
-                    </v-row> -->
                     <LoadingImg />
                   </template>
                   <v-overlay
