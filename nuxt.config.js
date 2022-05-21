@@ -25,7 +25,7 @@ export default {
       { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
     ],
     script: [
-      { src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GANA_ID}`, async: true },
+      { src: 'https://www.googletagmanager.com/gtag/js?id=G-M9X7SG7FVG', async: true },
       {
         hid: 'gtag',
         type: 'text/javascript',
@@ -33,7 +33,7 @@ export default {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
-                    gtag('config', '${process.env.GANA_ID}');`
+                    gtag('config', 'G-M9X7SG7FVG');`
       }
     ],
     __dangerouslyDisableSanitizersByTagID: {
