@@ -24,6 +24,22 @@ export default {
     link: [
       { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
     ],
+    script: [
+      { src: `https://www.googletagmanager.com/gtag/js?id=${GANA_ID}`, async: true },
+      {
+        hid: 'gtag',
+        type: 'text/javascript',
+        innerHTML: `window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', '${GANA_ID}');`
+      }
+    ],
+    __dangerouslyDisableSanitizersByTagID: {
+      clarity: ['innerHTML'],
+      gtag: ['innerHTML']
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -68,30 +84,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-microcms-module',
-    '@nuxtjs/google-gtag',
-    '@nuxtjs/gtm',
+    // '@nuxtjs/google-gtag',
+    // '@nuxtjs/gtm',
   ],
-  'google-gtag': {
-    id: process.env.GANA_ID,
-    // config: {
-    //   anonymize_ip: true, // anonymize IP
-    //   send_page_view: false, // might be necessary to avoid duplicated page track on page reload
-    //   linker: {
-    //     domains: ['domain.com','domain.org']
-    //   }
-    // },
-    debug: true, // enable to track in dev mode
-    // disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
-    // additionalAccounts: [{
-    //   id: 'AW-XXXX-XX', // required if you are adding additional accounts
-    //   config: {
-    //     send_page_view: false // optional configurations
-    //   }
-    // }]
-  },
-  gtm: {
-    id: process.env.GTM_ID, // タグマネージャーのid
-  },
+  // 'google-gtag': {
+  //   id: process.env.GANA_ID,
+  //   debug: true, // enable to track in dev mode
+  // },
+  // gtm: {
+  //   id: process.env.GTM_ID, // タグマネージャーのid
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
