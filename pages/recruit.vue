@@ -112,7 +112,7 @@
           </p>
           <v-row justify="end">
             <v-col cols="7">
-              <v-img
+              <!-- <v-img
                 class="re_img"
                 alt="Takahiro Ohara"
                 src="@/static/portrait.jpg"
@@ -129,7 +129,7 @@
                     ></v-progress-circular>
                   </v-row>
                 </template>
-              </v-img>
+              </v-img> -->
               <br />
               <img
                 class="re_img"
